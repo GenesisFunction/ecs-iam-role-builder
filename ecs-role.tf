@@ -16,6 +16,6 @@ resource "aws_iam_role" "this" {
 }
 EOF
 
-  tags = var.input_tags
+  tags = local.common_tags
 }
 
