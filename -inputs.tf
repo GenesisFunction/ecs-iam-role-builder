@@ -21,7 +21,7 @@ variable "cloudwatch_logs_policy" {
 variable "cloudwatch_logs_group_path" {
   description = "Path to cloudwatch logs group which containers should create new log streams in"
   type        = string
-  default     = null
+  default     = false
 }
 
 variable "ecr_policy" {
