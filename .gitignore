@@ -1,0 +1,5 @@
+# Terraform folder
+**/.terraform/*
+
+# Temporary IDE files
+**/.idea/*
