@@ -70,7 +70,7 @@ module "ecs_default_iam_role" {
 | <a name="input_custom_policy_jsons"></a> [custom\_policy\_jsons](#input\_custom\_policy\_jsons) | List of JSON strings of custom policies to be attached to the ecs iam role | `list(string)` | `[]` | no |
 | <a name="input_ecr_policy"></a> [ecr\_policy](#input\_ecr\_policy) | True/False to attach permissions for ECR. If true (default), should also define ecr\_repo | `bool` | `false` | no |
 | <a name="input_ecr_repos"></a> [ecr\_repos](#input\_ecr\_repos) | List of ARNs to ECR repos that the tasks should be able to pull images from | `list(string)` | `null` | no |
-| <a name="input_input_tags"></a> [input\_tags](#input\_input\_tags) | Map of tags to apply to resources | `map(string)` | <pre>{<br>  "Developer": "GenesisFunction",<br>  "Provisioner": "Terraform"<br>}</pre> | no |
+| <a name="input_input_tags"></a> [input\_tags](#input\_input\_tags) | Map of tags to apply to resources | `map(string)` | <pre>{<br>  "Developer": "StratusGrid",<br>  "Provisioner": "Terraform"<br>}</pre> | no |
 | <a name="input_role_name"></a> [role\_name](#input\_role\_name) | Unique string name of iam role to be created. Also prepends supporting resource names | `string` | n/a | yes |
 
 ## Outputs
