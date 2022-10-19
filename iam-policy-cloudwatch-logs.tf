@@ -8,7 +8,7 @@ data "aws_iam_policy_document" "cloudwatch_logs" {
     ]
 
     resources = [
-      "*",
+      "arn:aws:logs:*:*:log-group:${var.cloudwatch_logs_group_path}:*",
     ]
   }
   statement {
@@ -37,4 +37,3 @@ resource "aws_iam_role_policy_attachment" "cloudwatch_logs" {
   role       = aws_iam_role.this.name
   policy_arn = aws_iam_policy.cloudwatch_logs[0].arn
 }
-
