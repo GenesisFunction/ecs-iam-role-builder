@@ -1,0 +1,16 @@
+ module "ecs_default_iam_role" {
+    source  = "StratusGrid/ecs-iam-role-builder/aws"
+    version = ">= 1.0"
+    # source  = "github.com/StratusGrid/terraform-aws-ecs-iam-role-builder"
+  
+    cloudwatch_logs_policy     = true
+    cloudwatch_logs_group_path = "/ecs/group-name"
+  
+    ecr_policy = true
+    ecr_repos  = [
+      aws_ecr_repository.this.arn
+    ]
+    
+    role_name  = "${var.name_prefix}-default-ecs-iam-role${local.full_suffix}"
+    input_tags = merge(local.common_tags, {})
+  }
